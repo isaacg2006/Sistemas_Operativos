@@ -1,0 +1,199 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto Sistemas Operativos - Contacto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb;
+            color: #374151;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #1e40af;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        nav a:hover {
+            border-bottom-color: #fbbf24;
+        }
+        nav a.active {
+            border-bottom-color: #fbbf24;
+            font-weight: 700;
+        }
+        main {
+            flex-grow: 1;
+            max-width: 600px;
+            margin: 2rem auto 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+        }
+        main h1 {
+            text-align: center;
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        main p.intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            display: block;
+            color: #374151;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1.5px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        button[type="submit"] {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #1e40af;
+        }
+        section.contact-info {
+            margin-top: 2.5rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        section.contact-info p {
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        section.contact-info i {
+            color: #2563eb;
+            min-width: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 1rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Proyecto Sistemas Operativos
+    </header>
+    <nav aria-label="Menú principal">
+        <a href="../index.html"><i class="fas fa-desktop"></i> Proyecto</a>
+        <a href="./Contacto.html" class="active"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+    <main>
+        <h1>Contáctanos</h1>
+        <p class="intro">¿Tienes alguna duda o comentario? Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        <form action="#" method="POST" novalidate>
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+            </div>
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+            </div>
+            <div>
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Motivo de contacto" required />
+            </div>
+            <div>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        <section class="contact-info" aria-label="Información de contacto">
+            <p><i class="fas fa-phone-alt" aria-hidden="true"></i> Teléfono: <a href="tel:+1234567890">+57 314 3686886</a></p>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:contacto@sistemasoperativos.com">Isaacdavidsuanoches2020@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dirección: Calle 123, Barranquilla</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Proyecto Sistemas Operativos. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../stylo/Contacto.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="./sitemas.html">Inicio</a></li>
+      <li><a href="./tipos.html">Tipos</a></li>
+      <li><a href="./caracteristicas.html">Características</a></li>
+      <li><a href="./comparacion.html">Comparación</a></li>
+      <li><a href="./contactos.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Formulario de Contacto</h1>
+    
+    <form action="#" novalidate>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" name="nombre" required autocomplete="name" />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required autocomplete="email" />
+      </div>
+      
+      <div class="form-group">
+        <label for="so">Sistema Operativo:</label>
+        <select id="so" name="so" required>
+          <option value="" disabled selected>Seleccione un sistema operativo</option>
+          <option value="windows">Windows</option>
+          <option value="macos">macOS</option>
+          <option value="linux">Linux</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+      
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Ubicación</h2>
+    <div class="mapa">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.326259979422!2d-122.130155!3d47.6400339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906d9000000001:0x3c7a42a3d5ff3e5d!2sMicrosoft%20Headquarters!5e0!3m2!1ses!2sus!4v1713438435182!5m2!1ses!2sus" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Microsoft Headquarters">
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
